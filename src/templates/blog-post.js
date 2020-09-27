@@ -66,14 +66,14 @@ class BlogPost extends Component {
           img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
           title={title}
           authorName={name}
-          authorImage={iconUrl}
-          subTitle={parseChineseDate(date)}
+          // authorImage={iconUrl}
+          // subTitle={parseChineseDate(date)}
         />
         {/* <Sidebar /> */}
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
-            Please visit our main page @ 
+            Please visit our main page @
             <ExternalLink
               href="https://visitmystudio.com"
               title="Visit My Studio"
