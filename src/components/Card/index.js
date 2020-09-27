@@ -40,10 +40,10 @@ const Card = ({
       <div className="data">
         <div className="content">
           <div className="stats">
-            <span className="date">{date.split('T')[0]}</span>
+            {/* <span className="date">{date.split('T')[0]}</span>
             {tags.map(name => (
               <Tag name={name} key={name} />
-            ))}
+            ))} */}
           </div>
           <Link to={url} href={url}>
             <h4 className="title">{title}</h4>
