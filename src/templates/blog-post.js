@@ -70,6 +70,7 @@ class BlogPost extends Component {
           // subTitle={parseChineseDate(date)}
         />
         {/* <Sidebar /> */}
+        <div style={{width: '20%'}}></div>
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
