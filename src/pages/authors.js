@@ -6,14 +6,14 @@ import Tag from '../components/Tag';
 import SEO from '../components/SEO';
 
 // eslint-disable-next-line react/prop-types
-const TagPage = ({ data }) => {
+const AuthorPage= ({ data }) => {
   const { allMarkdownRemark } = data;
 
   const mapping = {};
 
   allMarkdownRemark.edges.forEach(({ node }) => {
-    const { tags } = node.frontmatter;
-    tags.forEach((name) => {
+    const { author } = node.frontmatter;
+    author.forEach((name) => {
       if (mapping[name]) {
         mapping[name] += 1;
       } else {
@@ -22,7 +22,7 @@ const TagPage = ({ data }) => {
     });
   });
 
-  const tags = Array.from(Object.keys(mapping)).sort(
+  const author = Array.from(Object.keys(mapping)).sort(
     (b, a) => mapping[a] - mapping[b],
   );
 
@@ -37,32 +37,32 @@ const TagPage = ({ data }) => {
         {/* <Sidebar /> */}
 
         <div className="col order-2">
-          {tags.map(item => (
-            <Tag name={item} key={item} count={mapping[item] } isAuth={'/tag/'}/>
+          {author.map(item => (
+            <Tag name={item} key={item} count={mapping[item]} isAuth={'/author/'}/>
           ))}
         </div>
       </div>
       <SEO
-        title="Visit My Studio Tags"
-        url="/tags/"
+        title="Visit My Studio author"
+        url="/authors/"
         siteTitleAlt="VMS Blog"
         isPost={false}
-        description="Tags Page"
+        description="author Page"
         image="https://i.imgur.com/M795H8A.jpg"
       />
     </div>
   );
 };
 
-export default TagPage;
+export default AuthorPage;
 
 export const pageQuery = graphql`
-  query getAllTags {
+  query getAllAuthor {
     allMarkdownRemark {
       edges {
         node {
           frontmatter {
-            tags
+            author
           }
         }
       }

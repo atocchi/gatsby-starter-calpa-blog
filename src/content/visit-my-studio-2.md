@@ -1,15 +1,15 @@
 ---
 templateKey: blog-post
 author: 
-- Test
-id: visit-my-studio
+- Nini
+id: visit-my-studio2
 title: Visit My Studio
-slug: /visit-my-studio/
+slug: /visit-my-studio/2/
 date: 30/09/2020
-description: Introducing Visit My Studio Blogs
+description: Second Visit my Studio Blog
 headerImage: https://i.imgur.com/w7QgQmk.jpg
 tags:
-  - intro
+  - visit-my-studio
 ---
 ## Visit My Studio
 This is a test page for the blog

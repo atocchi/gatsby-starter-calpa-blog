@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Tag = ({ name, count }) => (
-  <a href={`/tag/${name}`} className="header-tag">
+const Tag = ({ name, count, isAuth }) => (
+  <a href={isAuth + name} className="header-tag">
     {name}
     &nbsp;
     {count}

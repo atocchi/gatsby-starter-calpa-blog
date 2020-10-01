@@ -47,7 +47,12 @@ const Card = ({
             ))} */}
           </div>
           <Link to={url} href={url}>
-            <h4 className="title">{title} @{author}</h4>
+            <h4 className="title">
+              {title}
+              {' '}
+              @
+              {author}
+            </h4>
           </Link>
           <p>{description}</p>
           <Link to={url} href={url}>

@@ -5,9 +5,9 @@ import SEO from '../components/SEO';
 import Sidebar from '../components/Sidebar';
 
 // eslint-disable-next-line react/prop-types
-const TagPage = ({ data, pageContext }) => {
+const AuthorPage = ({ data, pageContext }) => {
   const { edges } = data.allMarkdownRemark;
-  const { tag } = pageContext;
+  const { author } = pageContext;
   return (
     <div className="container">
       <div
@@ -28,7 +28,7 @@ const TagPage = ({ data, pageContext }) => {
           >
             {edges.length}
             &nbsp;Articles in&nbsp;
-            {tag}
+            {author}
           </div>
           {edges.map(({ node }) => (
             <Card {...node.frontmatter} key={node.id} />
@@ -39,24 +39,24 @@ const TagPage = ({ data, pageContext }) => {
       </div>
 
       <SEO
-        title={tag}
-        url={`/tag/${tag}`}
-        siteTitleAlt="Visit My Studio Tags"
+        title={author}
+        url={`/author/${author}`}
+        siteTitleAlt="Visit My Studio Author"
         isPost={false}
-        description={tag}
+        description={author}
         image="https://i.imgur.com/M795H8A.jpg"
       />
     </div>
   );
 };
 
-export default TagPage;
+export default AuthorPage;
 
 export const pageQuery = graphql`
-  query tagQuery($tag: [String!]) {
+  query AuthorQuery($author: [String!]) {
     allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { tags: { in: $tag } } }
+      filter: { frontmatter: { author: { in: $author } } }
     ) {
       edges {
         node {
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
             title
             date
             tags
+            author
             headerImage
             description
           }

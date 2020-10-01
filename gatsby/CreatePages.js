@@ -61,7 +61,9 @@ module.exports = ({ actions, graphql }) => {
     // 創建文章頁面
     edges.forEach(({ node }, index) => {
       const { id, frontmatter, fields } = node;
-      const { slug, tags, templateKey, author } = frontmatter;
+      const {
+        slug, tags, templateKey, author,
+      } = frontmatter;
 
       // 讀取標籤
       if (tags) {
