@@ -21,6 +21,7 @@ const CardHeader = ({ url, image, backgroundColor }) => (
 
 const Card = ({
   title,
+  author,
   date,
   url,
   headerImage,
@@ -46,7 +47,7 @@ const Card = ({
             ))} */}
           </div>
           <Link to={url} href={url}>
-            <h4 className="title">{title}</h4>
+            <h4 className="title">{title} @{author}</h4>
           </Link>
           <p>{description}</p>
           <Link to={url} href={url}>
@@ -60,6 +61,7 @@ const Card = ({
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   date: PropTypes.string,
   url: PropTypes.string.isRequired,
   headerImage: PropTypes.string,

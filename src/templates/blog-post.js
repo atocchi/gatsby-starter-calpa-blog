@@ -58,23 +58,23 @@ class BlogPost extends Component {
 
     const { slug } = fields;
 
-    const { date, headerImage, title } = frontmatter;
+    const { date, headerImage, title, author } = frontmatter;
 
     return (
       <div className="row post order-2">
         <Header
           img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
           title={title}
-          authorName={name}
-          // authorImage={iconUrl}
+          authorName={author}
+          authorImage={iconUrl}
           // subTitle={parseChineseDate(date)}
         />
         {/* <Sidebar /> */}
-        <div style={{width: '20%'}}></div>
+        <div style={{ width: '20%' }} />
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
-            Please visit our main page @
+            Please visit our main page @ 
             <ExternalLink
               href="https://visitmystudio.com"
               title="Visit My Studio"
@@ -113,6 +113,7 @@ export const pageQuery = graphql`
     }
     frontmatter {
       id
+      author
       title
       slug
       date

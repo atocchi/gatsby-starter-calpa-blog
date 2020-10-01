@@ -34,7 +34,7 @@ const TagPage = ({ data }) => {
           margin: 15,
         }}
       >
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <div className="col order-2">
           {tags.map(item => (
@@ -43,9 +43,9 @@ const TagPage = ({ data }) => {
         </div>
       </div>
       <SEO
-        title="標籤"
+        title="Visit My Studio Tags"
         url="/tags/"
-        siteTitleAlt="Calpa's Blog"
+        siteTitleAlt="VMS Blog"
         isPost={false}
         description="Tags Page"
         image="https://i.imgur.com/M795H8A.jpg"

@@ -17,7 +17,7 @@ const TagPage = ({ data, pageContext }) => {
         }}
       >
         {/* <Sidebar /> */}
-        <div style={{width: '20%'}}></div>
+        <div style={{ width: '20%' }} />
         <div className="col-xl-10 col-lg-7 col-md-12 col-xs-12 order-2">
           <div
             className="col-12"

@@ -4,7 +4,7 @@ author: Test
 id: visit-my-studio
 title: Visit My Studio
 slug: /visit-my-studio/
-date: 2020-09-25T18:48:03.125Z
+date: Test Author
 description: Introducing Visit My Studio Blogs
 headerImage: https://i.imgur.com/w7QgQmk.jpg
 tags:
