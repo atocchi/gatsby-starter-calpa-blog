@@ -41,6 +41,7 @@ module.exports = ({ actions, graphql }) => {
     const { edges = [] } = result.data.allMarkdownRemark;
 
     const tagSet = new Set();
+    const authorSet = new Set();
 
     createPaginatedPages({
       edges,
@@ -70,6 +71,10 @@ module.exports = ({ actions, graphql }) => {
         tags.forEach(item => tagSet.add(item));
       }
 
+      if (author) {
+        author.forEach(item => authorSet.add(item));
+      }
+
       // 允许自定义地址
       let $path = fields.slug;
       if (slug) {
@@ -81,6 +86,7 @@ module.exports = ({ actions, graphql }) => {
       createPage({
         path: $path,
         tags,
+        author,
         component: path.resolve(`src/templates/${String(component)}.js`),
         // additional data can be passed via context
         context: {
@@ -90,13 +96,22 @@ module.exports = ({ actions, graphql }) => {
       });
     });
 
-    // 創建標籤頁面
-    return tagSet.forEach((tag) => {
+  tagSet.forEach((tag) => {
       createPage({
         path: `/tag/${tag}`,
         component: path.resolve('src/templates/tag.js'),
         context: {
           tag,
+        },
+      });
+    });
+ 
+    authorSet.forEach((author) => {
+      createPage({
+        path: `/author/${author}`,
+        component: path.resolve('src/templates/author.js'),
+        context: {
+          author,
         },
       });
     });
