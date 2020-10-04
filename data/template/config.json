@@ -39,6 +39,10 @@
     {
       "href": "/tags/",
       "title": "Tags"
+    },
+    {
+      "href": "/authors",
+      "title": "Authors"
     }
   ],
   "redirectors": [
@@ -57,5 +61,22 @@
   "zhihuUsername": "piao-xue-wu-ying",
   "githubUsername": "calpa",
   "maxPostsInPage": 10,
-  "facebook": "calpablog"
+  "facebook": "calpablog",
+  "profile" : 
+    {
+      "Test" :{
+        "about": "This is a test blog profile to test how profiles work",
+        "picture": "https://i.imgur.com/d8Jxo5O.jpg",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/visitmystudio/",
+        "description": "This is a test blog, tthat has been created to test how blogs will look"
+      },
+      "Nini": {
+        "about": "This is a test blog profile to test how profiles work",
+        "picture": "https://i.imgur.com/d8Jxo5O.jpg",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/visitmystudio/",
+        "description": "This is a test blog, tthat has been created to test how blogs will look"
+      }
+    }
 }

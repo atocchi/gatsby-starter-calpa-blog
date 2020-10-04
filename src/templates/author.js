@@ -3,11 +3,15 @@ import { graphql } from 'gatsby';
 import Card from '../components/Card';
 import SEO from '../components/SEO';
 import Sidebar from '../components/Sidebar';
+import { config } from '../../data';
+
+const {profile = [] } = config;
 
 // eslint-disable-next-line react/prop-types
 const AuthorPage = ({ data, pageContext }) => {
   const { edges } = data.allMarkdownRemark;
   const { author } = pageContext;
+  console.log(profile[author].picture)
   return (
     <div className="container">
       <div
@@ -16,8 +20,8 @@ const AuthorPage = ({ data, pageContext }) => {
           margin: 15,
         }}
       >
-        {/* <Sidebar /> */}
-        <div style={{ width: '20%' }} />
+        <Sidebar name={author} image={profile[author].picture} desc={profile[author].description}/>
+        {/* <div style={{ width: '20%' }} /> */}
         <div className="col-xl-10 col-lg-7 col-md-12 col-xs-12 order-2">
           <div
             className="col-12"
@@ -25,9 +29,9 @@ const AuthorPage = ({ data, pageContext }) => {
               fontSize: 20,
               margin: 15,
             }}
-          >
+          > 
             {edges.length}
-            &nbsp;Articles in&nbsp;
+            &nbsp;Article{edges.length > 1 ? 's' : ''} by&nbsp;
             {author}
           </div>
           {edges.map(({ node }) => (

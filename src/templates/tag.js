@@ -27,7 +27,7 @@ const TagPage = ({ data, pageContext }) => {
             }}
           >
             {edges.length}
-            &nbsp;Articles in&nbsp;
+            &nbsp;Article{edges.length > 1 ? 's' : ''} in&nbsp;
             {tag}
           </div>
           {edges.map(({ node }) => (
