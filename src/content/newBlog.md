@@ -5,7 +5,7 @@ author:
 id: visit-my-studio2
 title: Visit My Studio-Upload
 slug: /visit-my-studio/3/
-date: 04/10/2020
+date: 10/04/2020
 description: Third Visit my Studio Blog
 headerImage: https://i.imgur.com/w7QgQmk.jpg
 tags:
