@@ -3,10 +3,10 @@ templateKey: blog-post
 author: 
 - Nini_Huang
 id: Ashish-Blog
-title: Visit My Studio
+title: Ashish
 slug: /Ashish/
 date: 10/07/2020
-description: 'Inside the Artist's Studio: Conversation with Ashish Dubey'
+description: Inside the Artist's Studio; Conversation with Ashish Dubey
 headerImage: https://www.dubeyashish.com/images/1_big.jpg
 tags:
   - visit-my-studio
