@@ -32,7 +32,7 @@
       "title": "Calpa's Blog"
     }
   ],
-  "iconUrl": "https://i.imgur.com/kjt2x52.jpg",
+  "iconUrl": "https://visitmystudio.com/img/touch-icon-120x120.png",
   "wordings": ["GatsbyJS, ReactJS", "全週期開發者"],
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
@@ -72,11 +72,13 @@
         "description": "This is a test blog, tthat has been created to test how blogs will look"
       },
       "Nini_Huang": {
-        "about": "This is a test blog profile to test how profiles work",
-        "picture": "https://i.imgur.com/d8Jxo5O.jpg",
+        "about": "Nini writes for the blog of Visit My Studio.",
+        "email": "ninihuizihuang@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/nini-huang/",
+        "picture": "https://i.imgur.com/EtXZWkK.jpg",
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/visitmystudio/",
-        "description": "This is a test blog, tthat has been created to test how blogs will look"
+        "description": "Nini writes for the blog of Visit My Studio. Her interests include Art History, Digital Media and food!"
       }
     }
 }

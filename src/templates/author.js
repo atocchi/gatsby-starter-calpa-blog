@@ -20,7 +20,7 @@ const AuthorPage = ({ data, pageContext }) => {
           margin: 15,
         }}
       >
-        <Sidebar name={author} image={profile[author].picture} desc={profile[author].description}/>
+        <Sidebar name={author} image={profile[author].picture} desc={profile[author].description} email={profile[author].email} linkedin={profile[author].linkedin}/>
         {/* <div style={{ width: '20%' }} /> */}
         <div className="col-xl-10 col-lg-7 col-md-12 col-xs-12 order-2">
           <div

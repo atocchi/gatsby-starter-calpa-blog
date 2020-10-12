@@ -13,7 +13,6 @@ const {
   wordings = [],
   githubUsername,
   zhihuUsername,
-  email,
   iconUrl,
   about,
   facebook,
@@ -32,7 +31,7 @@ const Icon = ({ href, icon }) => (
   </a>
 );
 
-const Sidebar = ({ totalCount, latestPosts, name, image, desc }) => (
+const Sidebar = ({ totalCount, latestPosts, name, image, desc, email, linkedin }) => (
   <header className="intro-header site-heading text-center col-xl-2 col-lg-3 col-xs-12 order-lg-1">
     <div className="about-me">
       <Link to={about} href={about} className="name">
@@ -45,14 +44,17 @@ const Sidebar = ({ totalCount, latestPosts, name, image, desc }) => (
         href={`https://www.zhihu.com/people/${zhihuUsername}`}
         icon={['fab', 'zhihu']}
       /> */}
-      <Icon
+      {/* <Icon
         href={`https://github.com/${githubUsername}`}
         icon={['fab', 'github']}
-      />
+      /> */}
       <Icon href={`mailto:${email}`} icon={['far', 'envelope']} />
-      {facebook
-        && <Icon href={`https://www.facebook.com/${facebook}/`} icon={['fab', 'facebook']} />
+      {linkedin
+         && <Icon href={linkedin} icon={['fab', 'linkedin']} />
       }
+      {/* {facebook
+        && <Icon href={`https://www.facebook.com/${facebook}/`} icon={['fab', 'facebook']} />
+      } */}
       {/* <Information totalCount={totalCount} posts={latestPosts} /> */}
       <div>
         {desc}
@@ -69,6 +71,8 @@ Icon.propTypes = {
 Sidebar.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
+  email: PropTypes.string,
+  linkedin: PropTypes.string,
   desc: PropTypes.string,
   totalCount: PropTypes.number,
   latestPosts: PropTypes.array, //eslint-disable-line
@@ -76,6 +80,8 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {
   name: 'Anon',
+  email: '',
+  linkedin: '',
   image: '',
   desc: '',
   totalCount: 0,
