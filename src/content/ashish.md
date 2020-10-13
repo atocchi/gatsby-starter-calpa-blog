@@ -7,7 +7,7 @@ title: Ashish
 slug: /Ashish/
 date: 10/07/2020
 description: Inside the Artist's Studio; Conversation with Ashish Dubey
-headerImage: https://www.dubeyashish.com/images/1_big.jpg
+headerImage: https://i.imgur.com/YUuroIe.jpg
 tags:
   - visit-my-studio
   - ashish

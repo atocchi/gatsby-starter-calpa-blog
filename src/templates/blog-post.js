@@ -23,7 +23,7 @@ import { config } from '../../data';
 // Styles
 import './blog-post.scss';
 
-const { name, iconUrl, gitalk } = config;
+const { name, iconUrl, gitalk, profile } = config;
 
 const bgWhite = { padding: '10px 30px', background: 'white' };
 
@@ -46,7 +46,7 @@ class BlogPost extends Component {
       title,
       id: id || graphqlId,
     });
-    GitTalkInstance.render('gitalk-container');
+    // GitTalkInstance.render('gitalk-container');
   }
 
   render() {
@@ -68,7 +68,7 @@ class BlogPost extends Component {
           img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
           title={title}
           authorName={'@' + author}
-          authorImage={headerImage}
+          authorImage={profile[author].picture}
           subTitle={date}
         />
         {/* <Sidebar /> */}
@@ -84,13 +84,13 @@ class BlogPost extends Component {
             &nbsp;
             or continue blogging @
             <ExternalLink
-              href="https://github.com/calpa/"
+              href="http://vms-blog.s3-website.us-east-2.amazonaws.com/"
               title="Blog"
             />
             。
           </div>
 
-          <div id="gitalk-container" />
+          {/* <div id="gitalk-container" /> */}
         </div>
 
         <ShareBox url={slug} />
