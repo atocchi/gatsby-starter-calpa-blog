@@ -40,7 +40,7 @@ const TagPage = ({ data, pageContext }) => {
 
       <SEO
         title={tag}
-        url={`/tag/${tag}`}
+        url={`/blog/tag/${tag}`}
         siteTitleAlt="Visit My Studio Tags"
         isPost={false}
         description={tag}

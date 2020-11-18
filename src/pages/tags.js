@@ -38,13 +38,13 @@ const TagPage = ({ data }) => {
 
         <div className="col order-2">
           {tags.map(item => (
-            <Tag name={item} key={item} count={mapping[item] } isAuth={'/tag/'}/>
+            <Tag name={item} key={item} count={mapping[item]} isAuth="/tag/" />
           ))}
         </div>
       </div>
       <SEO
         title="Visit My Studio Tags"
-        url="/tags/"
+        url="/blogs/tags/"
         siteTitleAlt="VMS Blog"
         isPost={false}
         description="Tags Page"

@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: '/blog',
   siteMetadata: {
     title: 'Visti My Studio&apos;s Blog',
     description: 'Art Blogs for Visit My Studio',
@@ -58,7 +58,7 @@ module.exports = {
       options: {
         name: "Visit My Studio's Blog",
         short_name: 'VMS',
-        start_url: '/',
+        start_url: '/blog',
         background_color: '#ededed',
         theme_color: '#384f7c',
         display: 'standalone',

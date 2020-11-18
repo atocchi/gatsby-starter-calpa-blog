@@ -44,7 +44,7 @@ const AuthorPage= ({ data }) => {
       </div>
       <SEO
         title="Visit My Studio author"
-        url="/authors/"
+        url="/blog/authors/"
         siteTitleAlt="VMS Blog"
         isPost={false}
         description="author Page"

@@ -44,7 +44,7 @@ const AuthorPage = ({ data, pageContext }) => {
 
       <SEO
         title={author}
-        url={`/author/${author}`}
+        url={`/blog/author/${author}`}
         siteTitleAlt="Visit My Studio Author"
         isPost={false}
         description={author}

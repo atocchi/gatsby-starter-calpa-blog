@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tag = ({ name, count, isAuth }) => (
-  <a href={isAuth + name} className="header-tag">
+  <a href={`/blog${isAuth}${name}`} className="header-tag">
     {name}
     &nbsp;
     {count}

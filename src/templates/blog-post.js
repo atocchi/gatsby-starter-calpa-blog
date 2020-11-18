@@ -23,7 +23,9 @@ import { config } from '../../data';
 // Styles
 import './blog-post.scss';
 
-const { name, iconUrl, gitalk, profile } = config;
+const {
+  name, iconUrl, gitalk, profile,
+} = config;
 
 const bgWhite = { padding: '10px 30px', background: 'white' };
 
@@ -41,11 +43,11 @@ class BlogPost extends Component {
     const { frontmatter, id: graphqlId } = this.data.content.edges[0].node;
     const { title, id } = frontmatter;
 
-    const GitTalkInstance = new Gitalk({
-      ...gitalk,
-      title,
-      id: id || graphqlId,
-    });
+    // const GitTalkInstance = new Gitalk({
+    //   ...gitalk,
+    //   title,
+    //   id: id || graphqlId,
+    // });
     // GitTalkInstance.render('gitalk-container');
   }
 
@@ -67,7 +69,7 @@ class BlogPost extends Component {
         <Header
           img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
           title={title}
-          authorName={'@' + author}
+          authorName={`@${author}`}
           authorImage={profile[author].picture}
           subTitle={date}
         />
@@ -78,13 +80,13 @@ class BlogPost extends Component {
           <div className="m-message" style={bgWhite}>
             Please visit our main page @
             <ExternalLink
-              href="https://visitmystudio.com"
+              href="https://visitmystudio.co.uk"
               title="Visit My Studio"
             />
             &nbsp;
             or continue blogging @
             <ExternalLink
-              href="http://vms-blog.s3-website.us-east-2.amazonaws.com/"
+              href="https://visitmystudio.co.uk/blog"
               title="Blog"
             />
             。
@@ -93,7 +95,7 @@ class BlogPost extends Component {
           {/* <div id="gitalk-container" /> */}
         </div>
 
-        <ShareBox url={slug} />
+        {/* <ShareBox url={slug} /> */}
 
         <SEO
           title={title}

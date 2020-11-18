@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3896dfb3c7e3d6c87b9c.js"
+    "url": "webpack-runtime-322487bce4075673ffe2.js"
   },
   {
     "url": "styles.d5049958fe32356ef4fd.css"
@@ -44,14 +44,14 @@ self.__precacheManifest = [
     "url": "cb1608f2-4ba6cb4e2339049ae69c.js"
   },
   {
-    "url": "app-16661ca60f9c4487de0b.js"
+    "url": "app-11788e91d7bbac9cb934.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-15096bed533ed0ff8b58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ce8a4d30c1f91866a1c4bedd287d58fb"
+    "revision": "422de2d683d40a7f4df93bba89bbea8d"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -59,7 +59,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "6d646667d99728a1b07cd3f1632a2f4e"
+    "revision": "e769a1ee67d71089d4c6b669b278c8eb"
   },
   {
     "url": "polyfill-7df239d52a1e6d855311.js"
@@ -70,7 +70,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "354f7fbab53034a7bacff2c78fdcf386"
+    "revision": "a726e2ed8241360893c3fb82289fa348"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -89,12 +89,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/blog`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-16661ca60f9c4487de0b.js`))) {
+  if (!resources || !(await caches.match(`/blog/app-11788e91d7bbac9cb934.js`))) {
     return await fetch(event.request)
   }
 
@@ -107,7 +107,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/blog/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
