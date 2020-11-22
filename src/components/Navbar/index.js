@@ -23,15 +23,15 @@ const Navbar = () => (
         type="button"
         className="navbar-brand btn btn-default"
         onClick={() => {
-          ReactGA.event({
-            category: 'User',
-            action: 'Click navbar logo',
-          });
-          gotoPage('/');
+          // ReactGA.event({
+          //   category: 'User',
+          //   action: 'Click navbar logo',
+          // });
+          gotoPage('https://www.visitmystudio.co.uk/blog');
         }}
       >
         <span className="brand-logo">Visit My Studio</span>
-        &nbsp; Blogs
+        &nbsp; Blog
       </button>
       <button
         className="navbar-toggler"
