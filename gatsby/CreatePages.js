@@ -105,7 +105,16 @@ module.exports = ({ actions, graphql }) => {
         },
       });
     });
- 
+
+    createPage({
+      path: `/API`,
+      component: path.resolve('src/templates/API.js'),
+      context: {
+        id,
+        index,
+      },
+    })
+
     authorSet.forEach((author) => {
       createPage({
         path: `/author/${author}`,
