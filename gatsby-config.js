@@ -19,6 +19,48 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: `https://visitmystudio.com/blog`,
+        graphQLQuery: `  {
+          allMarkdownRemark {
+            edges {
+              node {
+                html
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  description
+                  headerImage
+                }
+              }
+            }
+          }
+        }`,
+        serialize: results =>
+        results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          path: node.fields.slug, // MUST contain a path
+          slug: node.fields.slug,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description,
+          headerImage: node.frontmatter.headerImage,
+          html: node.html,
+        })),
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url:  'https://visitmystudio.com/blog'+ node.fields.slug,
+          title: node.frontmatter.title,
+          slug: node.fields.slug,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description,
+          headerImage: node.frontmatter.headerImage,
+          excerpt: node.excerpt,
+        }))
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
