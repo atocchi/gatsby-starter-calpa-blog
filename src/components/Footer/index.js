@@ -10,15 +10,7 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col-sm-12 text-center">
-          <p className="architecture">
-            Build with&nbsp;
-            <ExternalLink href="https://www.gatsbyjs.org/" title="GatsbyJS" />
-            &nbsp;and&nbsp;
-            <ExternalLink
-              href="https://reactjs.org/"
-              title={`React ${React.version}`}
-            />
-          </p>
+          
         </div>
       </div>
     </div>

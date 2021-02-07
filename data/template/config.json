@@ -77,12 +77,40 @@
       },
       "Nini_Huang": {
         "about": "Nini writes for the blog of Visit My Studio.",
-        "email": "ninihuizihuang@gmail.com",
+        "email": "nini@visitmystudio.com",
         "linkedin": "https://www.linkedin.com/in/nini-huang/",
         "picture": "https://i.imgur.com/EtXZWkK.jpg",
         "facebook": "https://www.facebook.com/",
         "instagram": "https://www.instagram.com/visitmystudio/",
         "description": "Nini writes for the blog of Visit My Studio. Her interests include Art History, Digital Media and food!"
+      },
+      "Emil_Tetzner-Harris": {
+        "about": "Emil is leading Visit My Studio, his interests include art, machine learning and dog walking.",
+        "email": "emil@visitmystudio.com",
+        "linkedin": "https://www.linkedin.com/in/nini-huang/",
+        "picture": "https://res.cloudinary.com/visit-my-studio/image/upload/c_thumb,dpr_auto,f_auto,fl_progressive,h_300,q_auto:eco,w_300/v1600875599/Team/jkjtul6wgedmvgeviwk3.webp",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/visitmystudio/",
+        "description": "Emil is leading Visit My Studio, his interests include art, machine learning and dog walking."
+      },
+      "Tijana_Savicevic": {
+        "about": "Tijana is leading online strategy and writes for the blog of Visit My Studio, her interests include Art, Psychology and yoga",
+        "email": "tijana@visitmystudio.com",
+        "linkedin": "https://www.linkedin.com/in/nini-huang/",
+        "picture": "https://res.cloudinary.com/visit-my-studio/image/upload/c_thumb,dpr_auto,f_auto,fl_progressive,h_300,q_auto:eco,w_300/v1600875599/About%20Us/qnpxio6oyuhct3exsox3.webp",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/visitmystudio/",
+        "description": "Tijana is leading online strategy and writes for the blog of Visit My Studio, her interests include Art, Psychology and yoga"
+      },
+      "Jane_Frere": {
+        "about": "Jane Frere is a visual artist living in Scotland whose art reflects society and politics",
+        "email": "",
+        "linkedin": "https://www.linkedin.com/in/nini-huang/",
+        "picture": "https://i.imgur.com/WsITHjk.jpg",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/visitmystudio/",
+        "description": "Jane Frere is a visual artist living in Scotland whose art reflects society and politics"
       }
+
     }
 }
