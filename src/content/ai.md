@@ -28,9 +28,8 @@ Considering Ai paintings will start to become as advanced and complex as “huma
 Artificial intelligence is now at a stage that has turned distant dystopian ideas into a reality: driverless cars, facial recognition, automated legal services and so on. Our future is less likely to be about driving taxis or reading legal documentation, but somewhat more uncertain. 
 
 
-## “Automation will displace between 400 and 800 million jobs by 2030”  (a)
+## “Automation will displace between 400 and 800 million jobs by 2030”  [^a]
 
-</br>
 
 In contrast to many other industries, the creative and cultural industries might seem safe from mass job displacement. But the question is: can you fully automate creativity?
 
@@ -38,12 +37,12 @@ An attempt to answer this takes me back to how Edmond de Belamy, the AI-generate
 
 The team behind the portrait: the collective Obvious, needed quite a few ingredients for the machine learning process to ‘bake’ the Edmond de Belamy portrait. I’ve attempted to outline the process below: 
 
-Collecting a dataset consisting of thousands of portrait images. To be precise, they collected a total of *gasp* 15,000 original portraits painted between the 14th and 20th century. 
-Cleaning and splitting the dataset into training and validation data, while removing any outliers.
-The first ‘Generator’ computer model then creates images based on the training dataset. 
-These images are passed to the ‘Discriminator’ computer model, which then determines if the portrait images are human-made: comparing the validation dataset of human-made portraits to the computer-made ‘Generator’ portraits 
-The goal of the ‘Generator’ is to fool the ‘Discriminator’ into thinking that the portrait images it produced are actually human-made
-Once this happens successfully a computer-portrait image has passed the fake or not-fake test - this is how the Portrait Edmond de Belamy was created
+1. Collecting a dataset consisting of thousands of portrait images. To be precise, they collected a total of *gasp* 15,000 original portraits painted between the 14th and 20th century. 
+2. Cleaning and splitting the dataset into training and validation data, while removing any outliers.
+3. The first ‘Generator’ computer model then creates images based on patterns seen in the training dataset. 
+4. These images are passed to the ‘Discriminator’ computer model, which then determines if the portrait images are human-made by: comparing the validation dataset of human-made portraits to the computer-made ‘Generator’ portraits 
+5. The Generator then takes the feedback from the Discriminator and updates its model. We repeat the process until the Generator has a good-enough model whose generated images successfully fools the Discriminator into thinking that the portrait images it produced are human-made
+6. Once this happens successfully a computer-portrait portrait has passed the fake or not-fake test - this is how the Portrait Edmond de Belamy was created
 
 
 So the team made meticulous efforts to firstly acquire these ingredients, these being the 15,000 original portraits painted between the 14th and 20th century, then they proceeded with an equally meticulous process of perfecting the machine-learning model to create the final artistic product. 
@@ -56,9 +55,8 @@ He argued that machines are able to think creatively in a similar way to humans.
 
 Carl Frey, author of The Technology Trap, makes a distinction between the boundary of ‘human’ and ‘non-human’ artist creativity:
 
-## “Artists don’t just draw upon pre-existing artworks, they draw upon experiences from all walks of life — maybe even a dream — and a lot of our experiences are always going to be outside of the training dataset.” (b)
+## “Artists don’t just draw upon pre-existing artworks, they draw upon experiences from all walks of life — maybe even a dream — and a lot of our experiences are always going to be outside of the training dataset.” [^b]
 
-<br>
 
 So maybe we don’t need to worry yet - our visual artists are safe from being replaced with silicon chips - for now! Computer creativity isn’t *exactly* going to replace human creativity anytime soon.
 
@@ -66,14 +64,18 @@ As Michael Wooldridge, professor of computer sciences at Oxford university, puts
 
 <br>
 
-*References:*
+  
 
-[Artificial Intelligence - Widespread Job Losses](https://www.iotforall.com/impact-of-artificial-intelligence-job-losses)
-[The impact of AI on business and society](https://www.ft.com/content/e082b01d-fbd6-4ea5-a0d2-05bc5ad7176c)
+[^a]: [Artificial Intelligence - Widespread Job Losses](https://www.iotforall.com/impact-of-artificial-intelligence-job-losses)
 
-*Further reading:*
+[^b]: [The impact of AI on business and society](https://www.ft.com/content/e082b01d-fbd6-4ea5-a0d2-05bc5ad7176c)
 
-[Artsy Editorial Art Failing Grasp Christies Ai Portrait Coup](https://www.artsy.net/article/artsy-editorial-art-failing-grasp-christies-ai-portrait-coup)
-[Ai Art Portrait Auction Christie's Belamy Obvious Robbie Barrat Gans](https://www.theverge.com/2018/10/23/18013190/ai-art-portrait-auction-christies-belamy-obvious-robbie-barrat-gans)
-[A Collaboration Between Two Artists One Human One A Machine](https://www.christies.com/features/A-collaboration-between-two-artists-one-human-one-a-machine-9332-1.aspx)
-[Can Machines Think?](https://medium.com/swlh/can-machines-think-9fc81e61ac6)
+  *Further reading:*
+
+  [Artsy Editorial Art Failing Grasp Christies Ai Portrait Coup](https://www.artsy.net/article/artsy-editorial-art-failing-grasp-christies-ai-portrait-coup)
+
+  [Ai Art Portrait Auction Christie's Belamy Obvious Robbie Barrat Gans](https://www.theverge.com/2018/10/23/18013190/ai-art-portrait-auction-christies-belamy-obvious-robbie-barrat-gans)
+
+  [A Collaboration Between Two Artists One Human One A Machine](https://www.christies.com/features/A-collaboration-between-two-artists-one-human-one-a-machine-9332-1.aspx)
+
+  [Can Machines Think?](https://medium.com/swlh/can-machines-think-9fc81e61ac6)
