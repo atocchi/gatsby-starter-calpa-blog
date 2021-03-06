@@ -24,6 +24,7 @@ jobs:
         bucket: $AWS_S3
         skip_cleanup: true
         local_dir: public
+        upload-dir: $AWS_S3_DIR
         on:
           branch: travis
 
